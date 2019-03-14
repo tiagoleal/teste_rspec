@@ -11,6 +11,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.3.6"
 
+gem 'devise'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.4'
 # Use SCSS for stylesheets
@@ -46,8 +48,15 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem 'capybara'
+  gem 'selenium-webdriver', '~> 3.141'
+  gem 'chromedriver-helper' #somente quando utiliza docker
   gem "factory_bot_rails"
   gem "faker"
+  gem 'httparty'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
 
 group :development do

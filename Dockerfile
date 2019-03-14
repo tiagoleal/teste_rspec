@@ -7,7 +7,9 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.lis
 
 # Install dependencies
 RUN apt-get update && apt-get install -qq -y --no-install-recommends \
-nodejs build-essential libsqlite3-dev libpq-dev imagemagick git-all nano vim
+nodejs build-essential libsqlite3-dev libpq-dev imagemagick git-all nano vim 
+
+RUN apt-get update && apt-get install -qq -y chromium-driver
 
 RUN echo "alias vi=vim"  >> /etc/profile
 
