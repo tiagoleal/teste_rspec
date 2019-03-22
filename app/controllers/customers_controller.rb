@@ -1,6 +1,6 @@
 #app/controllers/customers_controller.rb
 class CustomersController < ApplicationController
-  before_action :authenticate_member!, except: [:index]
+  before_action :authenticate_member!, except: [:index, :show] 
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
   # GET /customers
